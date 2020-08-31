@@ -34,25 +34,17 @@
                 </ul>
             </div>
         </nav>
-    <nav class="navbar navbar-expand-lg navbar-light py-3" id="mainNav">
-        <div class="container">
-            <div class="collapse navbar-collapse" id="navbarResponsive">
-                <ul class="navbar-nav ml-auto my-2 my-lg-0">
-                    <li class="nav-item"><img src="{% static 'vincentResume/assets/img/uk.png'%}"/></li>
-                    <li class="nav-item"><img src="{% static 'vincentResume/assets/img/fr.png' %}"/></li>
-                </ul>
-                <ul class="nav navbar-nav navbar-right">
-                    <li class="dropdown">
-                      <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Languages <span class="caret"></span></a>
-                      <ul class="dropdown-menu" role="menu">
-                        <li><a href="/">English</a></li>
-                        <li><a href="/fr">Français</a></li>
-                      </ul>
-                    </li>
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <ul class = "text-inline text-right">
+                    <a href="/"><img src="{% static 'vincentResume/assets/img/uk.png'%}"/></a>
+                    <span class="text-primary"> · </li>
+                    <a href="/fr"><img src="{% static 'vincentResume/assets/img/fr.png'%}"/></a>
                 </ul>
             </div>
         </div>
-    </nav>
+    </div>
         <!-- Page Content-->
         <div class="container-fluid p-0">
             <!-- About-->
@@ -116,6 +108,10 @@
                             <span class="fa-li"><i class="fas fa-check"></i></span>
                             Git / Github
                         </li>
+                        <li>
+                            <span class="fa-li"><i class="fas fa-check"></i></span>
+                            Linux
+                        </li>
                     </ul>
                     <div class="subheading mb-3"><br/></div>
                     <ul class="list-inline dev-icons">
@@ -124,8 +120,8 @@
                         <li class="list-inline-item"><i class="fab fa-html5"></i></li>
                         <li class="list-inline-item"><i class="fab fa-css3-alt"></i></li>
                         <li class="list-inline-item"><i class="fab fa-js-square"></i></li>
-                        <li class="list-inline-item"><i class="nf nf-dev-mysql"></i></li>
                         <li class="list-inline-item"><i class="fab fa-github"></i></li>
+                        <li class="list-inline-item"><i class="fab fa-linux"></i></li>
                     </ul>
                     <br/>
                     <h2 class="mb-5">Spoken languages</h2>
