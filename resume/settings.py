@@ -12,17 +12,18 @@ https://docs.djangoproject.com/en/3.1/ref/settings/
 
 from pathlib import Path
 import os
-import django_heroku
+from dotenv import load_dotenv, find_dotenv
 
-# Build paths inside the project like this: BASE_DIR / 'subdir'.
-BASE_DIR = Path(__file__).resolve(strict=True).parent.parent
+load_dotenv(find_dotenv())
 
+# Build paths inside the project like this: os.path.join(BASE_DIR, ...)
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/3.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = '^kb&1cjywu%i_d#bv_ze=l5+oe9y-ewx-rahqk1g8l8(!w^&s7'
+SECRET_KEY = os.environ.get('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 if os.environ.get('ENV') == 'production':
@@ -30,7 +31,7 @@ if os.environ.get('ENV') == 'production':
 else:
     DEBUG = True
 
-ALLOWED_HOSTS = ['127.0.0.1', 'localhost', 'vincent-nowaczyk.herokuapp.com', '.herokuapps.com']
+ALLOWED_HOSTS = ['127.0.0.1', 'localhost', '139.59.187.108']
 
 
 # Application definition
@@ -81,8 +82,6 @@ WSGI_APPLICATION = 'resume.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
 
@@ -125,5 +124,3 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, "staticfiles")
-
-django_heroku.settings(locals())
