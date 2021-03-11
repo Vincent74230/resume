@@ -31,7 +31,7 @@ if os.environ.get('ENV') == 'production':
 else:
     DEBUG = True
 
-ALLOWED_HOSTS = ['127.0.0.1', 'localhost', '139.59.187.108', 'www.vincent-nowaczyk.com', 'vincent-nowaczyk.com']
+ALLOWED_HOSTS = ['127.0.0.1', 'localhost', '167.172.173.20', 'www.vincent-nowaczyk.com', 'vincent-nowaczyk.com']
 
 
 # Application definition
